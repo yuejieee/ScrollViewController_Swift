@@ -5,10 +5,10 @@
 首先创建一个新的类继承于此类
 ```
   // 设置顶部标题
-  self.titleArray = @[@"1", @"2", @"3"];
+  self.arrayTitle = ["全部", "待付款", "待取货", "已完成", "退款/售后"];
   // 添加子视图
-  for (NSInteger i = 0; i < 3; i++) {
-    UIViewController *vc = [[UIViewController alloc] init];
-      [self addChildViewController:vc];
-    }
+  for _ in self.arrayTitle {
+    let vc = UIViewController()
+    self.addChildViewController(vc)
+  }
 ```
